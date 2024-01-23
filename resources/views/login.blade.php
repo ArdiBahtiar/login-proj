@@ -11,14 +11,14 @@
     <div class="container"><br>
         <div class="col-md-4 col-md-offset-4">
             <h3 class="text-center"><b>ARD</b><br>Ardi's Research n Development</h3>
-            <hr>                                                                        <!-- hr buat pembatas dari suatu tema-->
-            @if(session('error'))                                                       <!-- digunakan kalo email sama password salah-->
+            <hr>                                                                        
+            @if(session('error'))                                                       
             <div class="alert alert-danger">
                 <b>Opps!</b> {{session('error')}}
             </div>
-            @endif                                                                      <!-- penutup if di laravel blade, atau kalo belom selese tambahin aja @else dulu-->
+            @endif                                                                      
             <form action="{{ route('actionlogin') }}" method="post">
-            @csrf                                                                       <!-- you should include a hidden CSRF _token field in the form so that the CSRF protection middleware can validate the request-->
+            @csrf                                                                       
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" name="email" class="form-control" placeholder="Email" required="">
